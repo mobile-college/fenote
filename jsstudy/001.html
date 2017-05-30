@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+div {
+    font-size: 3em;
+}
+</style>
+</head>
+<body>
+    <div id="show"></div>
+</body>
+<script src="./jq.js"></script>
+<script>
+/*
+var a = [];
+for (var i = 0; i < 10; i++) {
+  a[i] = function () {
+    console.log(i);
+    $('#show').append(i + ', ');
+  };
+}
+a[6](); // 10
+*/
+
+/*
+var a = [];
+for (var i = 0; i < 10; i++) {
+    var t = i;
+    a[i] = function (t) {
+        console.log(t);
+        $('#show').append(t + ', ');
+    };
+}
+a[6](); // 10
+*/
+
+/*
+var a = [];
+for (let i = 0; i < 10; i++) {
+  a[i] = function () {
+    console.log(i);
+  };
+}
+a[6](); // 6
+*/
+</script>
+</html>

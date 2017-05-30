@@ -1,0 +1,20 @@
+{
+  "name": "js-functional",
+  "version": "1.0.0",
+  "description": "JavaScript Functional Programming Cookbook (ES6)",
+  "main": "examples.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Functional",
+    "Cookbook",
+    "JavaScript",
+    "ES6"
+  ],
+  "author": "Matheus Lima",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.23"
+  }
+}

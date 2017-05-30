@@ -1,0 +1,78 @@
+.nav-header{
+	background-color:#ff8331;
+	height:4em;
+	line-height:4em;
+}
+.nav-header .categary a{
+	font-size:1.5em;
+	color:#FFFFFF;
+	margin-right:1em;
+}
+.nav-header .sharebox{
+	float:right;
+}
+.nav-header .sharebox a{
+	margin-left:1em;
+}
+.slide_fade{
+	overflow:hidden;
+	position:relative;
+	margin:2em auto;
+	width:100%;
+	background:#fff;
+	text-align:center;
+	}
+.slide_fade .box{
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	height:600px;
+	background:#000;
+	z-index:4;
+	}
+.slide_fade .list{
+	overflow:hidden;
+	height:9999px;
+	margin:0;padding:0;
+	}
+.slide_fade .list li{
+	position:relative;
+	width:100%;
+	height:600px;
+	margin:0;padding:0;
+	}
+
+.slide_fade .btn{
+	height:140px;
+	z-index:5;
+	margin:0 auto;
+	}
+.slide_fade .btn li{
+	overflow:hidden;
+	float:left;
+	width:160px;
+	margin:0 0 0 1.2em;
+	padding-top:1em;}
+.slide_fade .btn li a img{
+	-moz-border-radius: 0.3em; 
+	-webkit-border-radius: 0.3em; 
+	border-radius: 0.3em;
+	}
+.slide_fade .btn li:first-child{
+	margin-left:0;}
+.slide_fade .btn .selected{
+	border-top:3px solid #ff8331;
+	}
+.footer{
+	margin-top:4em;
+	background-color:#ff8331;
+}
+.footer-download-icon{
+	padding-top:2em;
+	margin-top:3em;
+	border-top: 1px dotted #FFFFFF;
+}
+.footer-download-icon h5{
+	color:#FFFFFF;
+	font-size:1.2em;
+}

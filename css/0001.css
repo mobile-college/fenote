@@ -1,0 +1,277 @@
+/*
+ *  0001.css
+ *  https://github.com/AllThingsSmitty/css-protips/tree/master/translations/zh-CN
+ *
+ *  https://bitsofco.de/styling-broken-images/
+ *  https://github.com/ireade/
+ *  https://css-tricks.com/centering-css-complete-guide/
+ *  https://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+ *  http://www.css-class.com/a-brief-history-of-css/
+ *
+ */
+
+/*
+ * 使用CSS复位
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * 继承 box-sizing
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * 使用 :not() 选择器来决定表单是否显示边框
+ */
+
+/* 添加边框 */
+.nav li {
+  border-right: 1px solid #666;
+}
+
+/* 为最后一个元素去除边框 不过不要这么做 */
+.nav li:last-child {
+  border-right: none;
+}
+/* 使用 :not() 伪类来达到同样的效果： */
+.nav li:not(:last-child) {
+  border-right: 1px solid #666;
+}
+
+/*
+ * 为 body 元素添加行高
+ */
+
+body {
+  line-height: 1.5;
+}
+
+/*
+ * 垂直居中任何元素
+ */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/*
+ * 逗号分隔的列表
+ */
+
+ul > li:not(:last-child)::after {
+  content: ",";
+}
+
+/*
+ * 使用负的 nth-child 来选择元素
+ */
+
+li {
+  display: none;
+}
+/* 选择第 1 至第 3 个元素并显示出来 */
+li:nth-child(-n+3) {
+  display: block;
+}
+/* 选择第 1 至第 3 个元素并显示出来 */
+li:not(:nth-child(-n+3)) {
+  display: none;
+}
+
+/*
+ * 使用 SVG 图标
+ */
+
+.logo {
+  background: url("logo.svg");
+}
+/* 注意： 针对仅有图标的按钮，如果 SVG 没有加载成功的话，以下样式对无障碍有所帮助： */
+.no-svg .icon-only:after {
+  content: attr(aria-label);
+}
+
+/*
+ * 使用 “形似猫头鹰” 的选择器
+ */
+
+* + * {
+  margin-top: 1.5em;
+}
+
+/*
+ * 使用 max-height 来建立纯 CSS 的滑块
+ */
+
+.slider {
+  max-height: 200px;
+  overflow-y: hidden;
+  width: 300px;
+}
+.slider:hover {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+/*
+ * 创造格子等宽的表格
+ */
+
+.calendar {
+  table-layout: fixed;
+}
+
+/*
+ * 利用 Flexbox 去除多余的外边距
+ * 与其使用 nth-， first-， 和 last-child 去除列之间多余的间隙，不如使用 flexbox 的 space-between 属性：
+ */
+
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+.list .person {
+  flex-basis: 23%;
+}
+
+/*
+ * 利用属性选择器来选择空链接
+ */
+
+a[href^="http"]:empty::before {
+  content: attr(href);
+}
+
+/*
+ * 给 “默认” 链接定义样式
+ */
+
+a[href]:not([class]) {
+  color: #008000;
+  text-decoration: underline;
+}
+
+/*
+ * 一致的垂直节奏
+ */
+
+.intro > * {
+  margin-bottom: 1.25rem;
+}
+
+/*
+ * 内在比例盒
+ */
+
+.container {
+  height: 0;
+  padding-bottom: 20%;
+  position: relative;
+}
+
+.container div {
+  border: 2px dashed #ddd;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*
+ * 为破碎图象定义样式
+ */
+
+img {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  height: auto;
+  line-height: 2;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+/* 以添加伪元素的法则来显示用户信息和URL的引用： */
+img:before {
+  content: "We're sorry, the image below is broken :(";
+  display: block;
+  margin-bottom: 10px;
+}
+img:after {
+  content: "(url: " attr(src) ")";
+  display: block;
+  font-size: 12px;
+}
+
+/*
+ * 用 rem 来调整全局大小；用 em 来调整局部大小
+ */
+
+/* 在根元素设置基本字体大小后 (html { font-size: 100%; }), 使用 em 设置文本元素的字体大小: */
+h2 {
+  font-size: 2em;
+}
+p {
+  font-size: 1em;
+}
+/* 然后设置模块的字体大小为 rem: */
+article {
+  font-size: 1.25rem;
+}
+aside .module {
+  font-size: .9rem;
+}
+
+/*
+ * 隐藏没有静音、自动播放的影片
+ */
+
+video[autoplay]:not([muted]) {
+  display: none;
+}
+
+/*
+ * 使用选择器 :root 来控制字体弹性
+ */
+
+/*
+在响应式布局中，字体大小应需要根据不同的视口进行调整。你可以计算字体大小根据视口高度的字体大小和宽度，这时需要用到:root: */
+:root {
+  font-size: calc(1vw + 1vh + .5vmin);
+}
+/* 现在，您可以使用 root em */
+body {
+  font: 1rem/1.6 sans-serif;
+}
+
+/*
+ * 为更好的移动体验，为表单元素设置字体大小
+ */
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  font-size: 16px;
+}

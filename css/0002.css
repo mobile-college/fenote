@@ -1,0 +1,27 @@
+/*
+ *  0000.css
+ *
+ *  Viewport-percentage lengths
+ *
+ */
+
+/*
+ *
+ * The viewport units are a new set of units designed for the challenges we face today.
+ * One-pagers, full-width grids, typography, and many other things rely on the size of the viewport. Previously, we hacked these challenges using percentages as mentioned earlier, or JavaScript.
+ * This new set of units consists of four different units.
+ * Two for each axis, and a minimum and maximum value of the two.
+ * vw: 1/100th viewport width
+ * vh: 1/100th viewport height
+ * vmin: 1/100th of the smallest side
+ * vmax: 1/100th of the largest side
+ *
+ * Note: IE9 uses vm instead of vmin. It does not support vmax.
+ * Just to clarify: 1vmax equals 1vh in portrait mode, whilst in landscape mode, 1vmax will equal 1vw.
+ *
+ *
+ */
+
+
+
+

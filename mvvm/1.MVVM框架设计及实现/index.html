@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MVVM学习之旅</title>
+    <script src="jQuery.js"></script>
+    <script src="aaObserver.js"></script>
+    <script src="core.js"></script>
+</head>
+<body>
+
+<div id='box' ao-controller="box">
+    <div id='aa-attr' style="background: #a9ea00;width:100px;height:100px;" ao-css-width="w" ao-click='click' ></div>
+    <p id='aa-text'>{{ w }}</p>
+</div>
+
+<script type="text/javascript">
+
+    var mm = MVVM.define("box", function(vm) {
+        vm.w = 150;
+        vm.click = function() {
+            vm.w = parseFloat(vm.w) + 10;
+        }
+    })
+
+    // //节点扫描,执行绑定
+    MVVM.scanTag();
+
+    setTimeout(function(){
+        console.log(mm)
+    },100)
+
+var object = {}
+
+//赋予自动事件的能力
+aaObserver.call(object)
+
+//订阅
+object.subscribe('aaaa',function(){
+  console.log('订阅了aaa')
+  return '返回值'
+})
+
+object.subscribe('bbbb',function(){
+console.log('订阅了bbbb')
+return '返回值'
+})
+
+//执行,并且得到返回值
+//r得到返回值
+var r = object.publish('aaaa');
+console.log(r);
+    object.publish('bbbb');
+
+//移除
+object.remove('aaaa');
+object.remove('bbbb');
+</script>
+</body>
+</html>

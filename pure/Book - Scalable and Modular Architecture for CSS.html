@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://smacss.com/book/type-module -->
+<html lang="en" class="wf-acuta-n7-active wf-acuta-n3-active wf-acuta-i3-active wf-quatroslab-n9-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+    <title>Book - Scalable and Modular Architecture for CSS</title>
+<meta name="readability-verification" content="whX5Lep8LELrRXZvs45GA6u4cJKCqHcHhBBQHN6v">
+    <link rel="stylesheet" href="./Book - Scalable and Modular Architecture for CSS_files/main.css">
+    <script type="text/javascript" async="" id="gauges-tracker" data-site-id="4e2e471c613f5d305b000003" src="./Book - Scalable and Modular Architecture for CSS_files/track.js"></script><script type="text/javascript" async="" src="./Book - Scalable and Modular Architecture for CSS_files/ga.js"></script><script src="./Book - Scalable and Modular Architecture for CSS_files/riu0bhz.js"></script>
+    <style type="text/css">.tk-acuta,body{font-family:"acuta","Bell MT","BellMT","Georgia",sans-serif;}.hd,.tk-quatro-slab,h1{font-family:"quatro-slab","Bell MT","BellMT","Georgia",sans-serif;}</style><style type="text/css">@font-face{font-family:acuta;src:url(https://use.typekit.com/af/2f7935/00000000000000000000e81c/27/l?subset_id=2&fvd=n7&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("woff2"),url(https://use.typekit.com/af/2f7935/00000000000000000000e81c/27/d?subset_id=2&fvd=n7&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("woff"),url(https://use.typekit.com/af/2f7935/00000000000000000000e81c/27/a?subset_id=2&fvd=n7&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:acuta;src:url(https://use.typekit.com/af/11e89a/00000000000000000000e816/27/l?subset_id=2&fvd=n3&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("woff2"),url(https://use.typekit.com/af/11e89a/00000000000000000000e816/27/d?subset_id=2&fvd=n3&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("woff"),url(https://use.typekit.com/af/11e89a/00000000000000000000e816/27/a?subset_id=2&fvd=n3&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:acuta;src:url(https://use.typekit.com/af/ecd6c8/00000000000000000000e817/27/l?subset_id=2&fvd=i3&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("woff2"),url(https://use.typekit.com/af/ecd6c8/00000000000000000000e817/27/d?subset_id=2&fvd=i3&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("woff"),url(https://use.typekit.com/af/ecd6c8/00000000000000000000e817/27/a?subset_id=2&fvd=i3&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("opentype");font-weight:300;font-style:italic;}@font-face{font-family:quatro-slab;src:url(https://use.typekit.com/af/02a427/00000000000000000001264f/27/l?subset_id=2&fvd=n9&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("woff2"),url(https://use.typekit.com/af/02a427/00000000000000000001264f/27/d?subset_id=2&fvd=n9&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("woff"),url(https://use.typekit.com/af/02a427/00000000000000000001264f/27/a?subset_id=2&fvd=n9&token=W2EumZUYDl58ZdHw4bH%2FDMjK7Y0EaC0Qc5p6B8I1lUAehKTtB38S%2F8F%2Fm00L2qdP) format("opentype");font-weight:900;font-style:normal;}</style><script>try{Typekit.load();}catch(e){}</script>
+    <script>
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-50611-10']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    </script>
+</head>
+<body class="">
+<div class="l-user">
+    <div class="l-constrained l-constrained-tighter">
+
+                    <a href="https://smacss.com/workshops/">Workshops</a> 
+            <a href="https://smacss.com/getsmacked">Get Smacked!</a> 
+            <a href="https://smacss.com/signin">Sign in</a>
+         
+    </div>
+</div>
+<div class="l-header">
+    <div class="l-constrained">
+        <div class="logo">
+        <h2 class="hd"><a href="https://smacss.com/"><span class="hd-line hd-line1">Scalable and Modular</span> <span class="hd-line hd-line2">Architecture for CSS</span></a></h2>
+                </div>
+    </div>
+</div>
+<div class="l-content">
+    <div class="l-constrained">
+            <div class="article"><article>
+<h1>Module Rules</h1>
+
+<p>As briefly mentioned in the previous section, a Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.</p>
+
+
+<p>When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. </p>
+
+<div class="exm">
+<p class="exm-caption">Module example</p>
+<pre><code>.module &gt; h2 {
+    padding: 5px;
+}
+
+.module span {
+    padding: 5px;
+}</code></pre>
+</div>
+
+<h2 id="avoid">Avoid element selectors</h2>
+
+<p>Use child or descendant selectors with element selectors if the element selectors will and can be predictable. Using <code>.module span</code> is great if a span will predictably be used and styled the same way every time while within that module.</p>
+
+<div class="exm">
+<p class="exm-caption">Styling with generic element</p>
+<pre><code>&lt;div class="fld"&gt;
+    &lt;span&gt;Folder Name&lt;/span&gt;
+&lt;/div&gt;
+
+/* The Folder Module */
+.fld &gt; span {
+    padding-left: 20px;
+    background: url(icon.png);
+}
+</code></pre>
+</div>
+
+<p>The problem is that as a project grows in complexity, the more likely that you will need to expand a component’s functionality and the more limited you will be in having used such a generic element within your rule.</p>
+
+
+<div class="exm">
+<p class="exm-caption">Styling with generic element</p>
+<pre><code>&lt;div class="fld"&gt;
+    &lt;span&gt;Folder Name&lt;/span&gt; 
+    &lt;span&gt;(32 items)&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<p>Now we are in a pickle. We don’t want the icon to appear on both elements within our folder module. Which leads me to my next point:</p>
+
+<p><em>Only include a selector that includes semantics.</em> A span or div holds none. A heading has some. A class defined on an element has plenty.</p>
+
+<div class="exm">
+<p class="exm-caption">Styling with generic element</p>
+<pre><code>&lt;div class="fld"&gt;
+    &lt;span class="fld-name"&gt;Folder Name&lt;/span&gt; 
+    &lt;span class="fld-items"&gt;(32 items)&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<p>By adding the classes to the elements, we have increased the semantics of what those elements mean and removed any ambiguity when it comes to styling them.</p>
+
+<p>If you do wish to use an element selector, it should be within one level of a class selector. In other words, you should be in a situation to use child selectors. Alternatively, you should be extremely confident that the element in question will not be confused with another element. The more semantically generic the HTML element (like a span or div), the more likely it will create a conflict down the road. Elements with greater semantics like headings are more likely to appear by themselves within a container and you are more likely able to use an element selector successfully.</p>
+
+
+<h2 id="newcontexts">New Contexts</h2>
+<p>Using the module approach also allows us to better understand where context changes are likely to occur. The need for a new positioning context, for example, is likely to happen at either the layout level or at the root of a module.</p>
+
+<h2 id="subclassing">Subclassing Modules</h2>
+
+<p>When we have the same module in different sections, the first instinct is to use a parent element to style that module differently.</p>
+
+
+<div class="exm">
+<p class="exm-caption">Subclassing</p>
+<pre><code>.pod { 
+    width: 100%; 
+}
+.pod input[type=text] { 
+    width: 50%; 
+}
+#sidebar .pod input[type=text] { 
+    width: 100%; 
+}
+</code></pre>
+</div>
+
+<p>The problem with this approach is that you can run into specificity issues that require adding even more selectors to battle against it or to quickly fall back to using <code>!important</code>.</p>
+
+<p>Expanding on our example pod, we have an input with two different widths. Throughout the site, the input has a label beside it and therefore the field should only be half the width. In the sidebar, however, the field would be too small so we increase it to 100% and have the label on top. All looks well and good. Now, we need to add a new component to our page. It uses most of the same styling as a <code>.pod</code> and so we re-use that class. However, this pod is special and has a constrained width no matter where it is on the site. It is a little different, though, and needs a width of 180px.</p>
+
+
+<div class="exm">
+<p class="exm-caption">Battling against specificity</p>
+<pre><code>.pod { 
+    width: 100%; 
+} 
+.pod input[type=text] { 
+    width: 50%; 
+}
+#sidebar .pod input[type=text] { 
+    width: 100%; 
+}
+
+.pod-callout { 
+    width: 200px; 
+}
+#sidebar .pod-callout input[type=text],
+.pod-callout input[type=text] { 
+    width: 180px; 
+}
+</code></pre>
+</div>
+
+<p>We are doubling up on our selectors to be able to override the specificity of <code>#sidebar</code>.</p>
+
+<p>What we should do instead is recognize that the constrained layout in the sidebar is a subclass of the pod and style it accordingly.</p>
+
+<div class="exm">
+<p class="exm-caption">Battling against specificity</p>
+<pre><code>.pod { 
+    width: 100%; 
+} 
+.pod input[type=text] { 
+    width: 50%; 
+}
+.pod-constrained input[type=text] { 
+    width: 100%; 
+}
+
+.pod-callout { 
+    width: 200px; 
+}
+.pod-callout input[type=text] { 
+    width: 180px; 
+}
+</code></pre>
+</div>
+
+<p>With sub-classing the module, both the base module and the sub-module class names get applied to the HTML element.</p>
+
+<div class="exm">
+<p class="exm-caption">Sub-module class name in HTML</p>
+<pre><code> &lt;div class="pod pod-constrained"&gt;...&lt;/div&gt;
+&lt;div class="pod pod-callout"&gt;...&lt;/div&gt; </code></pre>
+</div>
+
+<p>Try to avoid conditional styling based on location. If you are changing the look of a module for usage elsewhere on the page or site, sub-class the module instead. </p>
+
+<p>To help battle against specificity (and if IE6 isn’t a concern), then you can double up on your class names like in the next example.</p>
+<div class="exm">
+<p class="exm-caption">Subclassing</p>
+<pre><code>.pod.pod-callout { }
+
+&lt;!-- In the HTML --&gt;
+&lt;div class="pod pod-callout"&gt; ... &lt;/div&gt;
+</code></pre>
+</div>
+
+<p>You may be concerned about this, depending on the order of loading. For example, on Yahoo! Mail, we have code coming from different places. We had our base button styles and then we had a special set of buttons for the compose screen. However, when you clicked to add a contact to your address book, it loaded a component from a different product: Address Book. (Yes, the address book is a different product within Yahoo!.) The address book loaded its own base button styles, thereby overwriting the sub-classed button styles that we had.</p>
+
+<p>If load order is a factor in your project, watch out for specificity issues.</p>
+
+<p>While more specific layout components assigned with IDs could be used to provide specialized styling for modules, sub-classing the module will allow the module to be moved to other sections of the site more easily and you will avoid increasing the specificity unnecessarily.</p>
+</article></div>
+
+<div class="article-aside nav">
+
+<h4>Preface</h4>
+    <ol>
+        <li><a href="https://smacss.com/book/about">About the Author</a>
+        </li><li><a href="https://smacss.com/book/">Introduction</a>
+    </li></ol>
+<h4>Core</h4>
+    <ol start="3">
+        <li><a href="https://smacss.com/book/categorizing">Categorizing CSS Rules</a> </li>
+        <li><a href="https://smacss.com/book/type-base">Base Rules</a></li>
+        <li><a href="https://smacss.com/book/type-layout">Layout Rules</a></li>
+        <li><a href="https://smacss.com/book/type-module">Module Rules</a></li>
+        <li><a href="https://smacss.com/book/type-state">State Rules</a></li>
+        <li><a href="https://smacss.com/book/type-theme">Theme Rules</a></li>
+        <li><a href="https://smacss.com/book/state">Changing State</a></li>
+    </ol>
+<h4>Aspects of SMACSS</h4>
+    <ol start="10">
+        <li><a href="https://smacss.com/book/applicability">Depth of Applicability</a></li>
+        <li><a href="https://smacss.com/book/selectors">Selector Performance</a></li>
+        <li><a href="https://smacss.com/book/html5">HTML5 and SMACSS</a></li>
+        <li><a href="https://smacss.com/book/prototyping">Prototyping</a></li>
+    </ol>
+<h4>Aspects (cont) <em>Premium access</em></h4>
+    <ol start="14">
+        <li><a href="https://smacss.com/book/preprocessors">Preprocessors</a></li>
+        <li><a href="https://smacss.com/book/drop-the-base">Drop the Base</a></li>
+        <li><a href="https://smacss.com/book/icon-module">The Icon Module</a></li>
+        <li><a href="https://smacss.com/book/inheritance">Complicated Inheritance</a></li>
+        <li><a href="https://smacss.com/book/screencast-1">Screencast: Applying the Principles</a></li>
+        <li><a href="https://smacss.com/book/screencast-2">Screencast: Avoiding Content-specific Context</a></li>
+    </ol>
+<h4>Appendix</h4>
+    <ol start="20">
+        <li><a href="https://smacss.com/book/formatting">Formatting Code</a></li>
+        <li><a href="https://smacss.com/book/resources">Resources</a></li>
+    </ol>
+
+</div>
+
+
+
+    </div> <!-- constrained -->
+</div>
+ 
+<div class="l-footer">
+    <div class="l-constrained">
+        <p>        ← <a href="https://smacss.com/book/">Home</a> |         ↑ <a href="https://smacss.com/book/type-module#top">Top of Page</a></p>
+
+        <!-- Begin MailChimp Signup Form -->
+<div class="l-col-1-2">
+<h2>Subscribe to the Mailing List</h2>
+<form action="https://smacss.us2.list-manage.com/subscribe/post?u=2de298319eb1c284bd66e8b42&amp;id=a9d71ea668" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+    <p>Plenty more content, links, and even workshops to come. Stay up to date with all of it by <label for="mce-EMAIL">subscribing to the mailing list</label>.</p>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required="">
+	<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    <p>Powered by <a href="http://mailchimp.com/">MailChimp</a>.</p>
+</form>
+</div>
+<div class="l-col-1-2">
+    <h2>About SMACSS</h2>
+    <p><i>Scalable and Modular Architecture for CSS</i> is an approach to web development written by me, Jonathan Snook. You can reach me on my blog at <a href="http://snook.ca/">Snook.ca</a> or on Twitter at <a href="http://twitter.com/snookca">@snookca</a>. </p> 
+    <p><a href="https://smacss.com/privacy">Privacy Policy</a> | <a href="https://smacss.com/terms">Terms and Conditions</a> | <a href="https://smacss.com/contact">Contact</a></p>
+    <p>© Snook.ca Web Development, Inc. All rights reserved.</p>
+</div>
+<!--End mc_embed_signup-->
+    </div>
+</div>
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4e2e471c613f5d305b000003');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+	
+
+</body></html>
